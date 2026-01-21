@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVELLERS FIRST GUIDE</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            color: #fff;
+            background: url('image copy 28.png') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        aside {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 40px;
+            overflow: hidden;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255, 0, 150, 0.3), rgba(0, 200, 255, 0.3));
+            opacity: 0.4;
+            transition: opacity 0.5s;
+        }
+
+        .card:hover::after {
+            opacity: 0.7;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .card p {
+            padding: 10px;
+            font-weight: bold;
+            text-shadow: 1px1px2px rgba(0, 0, 0, 0.6);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            margin-top: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Animated gradient background overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 0, 150, 0.2), rgba(0, 200, 255, 0.2));
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TRAVELLERS FIRST GUIDE</h1>
+        <p>JUST EXPLORE AND TRAVEL</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Landscapes</a>
+        <a href="#">Forests</a>
+        <a href="#">Mountains</a>
+        <a href="#">Water</a>
+    </nav>
+
+    <main>
+        <aside>
+            <h3>Filters</h3>
+            <ul>
+                <li><input type="checkbox"> Forest</li>
+                <li><input type="checkbox"> Mountains</li>
+                <li><input type="checkbox"> Water</li>
+            </ul>
+            <h4>INTERESTING FACTS ABOUT TRAVELLING ✈️:</h4>
+            <ul>
+                <li>Traveling reduces stress and improves mental health.</li>
+                <li>People remember experiences longer than material things.</li>
+                <li>Traveling helps you learn new languages faster.</li>
+                <li>It boosts creativity and problem-solving skills.</li>
+                <li>You become more confident and independent.</li>
+                <li>Different cultures have completely different food habits.</li>
+                <li>Travel can change your perspective on life.</li>
+                <li>You make friends from different countries.</li>
+                <li>Traveling improves communication skills.</li>
+                <li>Every place has unique traditions and festivals.</li><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h3>🧳WHAT YOU SHOULD CARRY WHILE TRAVELLING🧳</h3>
+            </ul>
+        </aside>
+
+
+
+        <section class="gallery">
+            <!-- Use this structure for ALL cards (city name ABOVE image) -->
+
+<div class="card">
+    <p>Agra, India</p>
+    <img src="image.png" alt="Forest Path">
+    
+</div>
+
+<div class="card">
+    <p>Paris, France</p>
+    <img src="image copy.png" alt="Mountain Lake">
+   
+</div>
+
+<div class="card">
+    <p>New York, USA</p>
+    <img src="image copy 2.png" alt="Sunset Road">
+    
+</div>
+
+<div class="card">
+    <p>Rome, Italy</p>
+    <img src="image copy 3.png" alt="Waterfall">
+    
+</div>
+
+<div class="card">
+    <p>Dubai, UAE</p>
+    <img src="image copy 4.png" alt="Green Forest">
+    
+</div>
+
+<div class="card">
+    <p>Malé, Maldives</p>
+    <img src="image copy 7.png" alt="Sunset Beach">
+    
+</div>
+
+<div class="card">
+    <p>Kyoto, Japan</p>
+    <img src="image copy 6.png" alt="Forest Path">
+    
+</div>
+
+<div class="card">
+    <p>Zermatt, Switzerland</p>
+    <img src="image copy 8.png" alt="Mountain Lake">
+    
+</div>
+
+<div class="card">
+    <p>Reykjavik, Iceland</p>
+    <img src="image copy 9.png" alt="Sunset Road">
+   
+</div>
+
+<div class="card">
+    <p>Santorini, Greece</p>
+    <img src="image copy 10.png" alt="Waterfall">
+    
+</div>
+
+<div class="card">
+    <p>Goa, India</p>
+    <img src="image copy 11.png" alt="Green Forest">
+    
+</div>
+
+<div class="card">
+    <p>Manali, India</p>
+    <img src="image copy 12.png" alt="Sunset Beach">
+    
+</div>
+
+<div class="card">
+    <p>Jaipur, India</p>
+    <img src="image copy 13.png" alt="Forest Path">
+    
+</div>
+
+<div class="card">
+    <p>Leh, India</p>
+    <img src="image copy 14.png" alt="Mountain Lake">
+   
+</div>
+
+<div class="card">
+    <p>Alleppey, India</p>
+    <img src="image copy 15.png" alt="Sunset Road">
+    
+</div>
+
+<div class="card">
+    <p>Bali, Indonesia</p>
+    <img src="image copy 16.png" alt="Waterfall">
+  
+</div>
+
+<div class="card">
+    <p>Lima, Peru</p>
+    <img src="image copy 17.png" alt="Green Forest">
+    
+</div>
+
+<div class="card">
+    <p>Petra, Jordan</p>
+    <img src="image copy 18.png" alt="Sunset Beach">
+    
+</div>
+
+<div class="card">
+    <p>Sydney, Australia</p>
+    <img src="image copy 19.png" alt="Forest Path">
+    
+</div>
+
+<div class="card">
+    <p>London, UK</p>
+    <img src="image copy 20.png" alt="Mountain Lake">
+    
+</div>
+
+        </section>
+        <section class="gallery">
+            <div class="card">
+                <img src="image copy 21.png" alt="Forest Path">
+                <p>PASSPORT</p>
+            </div>
+            <div class="card">
+                <img src="image copy 22.png" alt="Mountain Lake">
+                <p>PHONE</p>
+            </div>
+            <div class="card">
+                <img src="image copy 23.png" alt="Sunset Road">
+                <p>CASH</p>
+            </div>
+            <div class="card">
+                <img src="image copy 24.png" alt="Waterfall">
+                <p>POWERBANK</p>
+            </div>
+            <div class="card">
+                <img src="image copy 25.png" alt="Green Forest">
+                <p>MEDICINES</p>
+            </div>
+            <div class="card">
+                <img src="image copy 26.png" alt="Sunset Beach">
+                <p>WATERBOTTLE</p>
+            </div>
+        </section>
+        <aside>
+                <h4 style="font-size: xx-large;">Why you should visit above places</h4>
+                
+
+                <section class="gallery">
+                   
+<div class="card">
+    <p>Agra, India</p>
+    <img src="image.png" alt="Forest Path">
+    <p>Symbol of eternal love and stunning architecture.</p>
+</div>
+
+<div class="card">
+    <p>Paris, France</p>
+    <img src="image copy.png" alt="Mountain Lake">
+    <p>Best panoramic view of Paris.</p>
+</div>
+
+<div class="card">
+    <p>New York, USA</p>
+    <img src="image copy 2.png" alt="Sunset Road">
+    <p>Icon of freedom and democracy.</p>
+</div>
+
+<div class="card">
+    <p>Rome, Italy</p>
+    <img src="image copy 3.png" alt="Waterfall">
+    <p>Experience ancient Roman history.</p>
+</div>
+
+<div class="card">
+    <p>Dubai, UAE</p>
+    <img src="image copy 4.png" alt="Green Forest">
+    <p>Tallest building in the world.</p>
+</div>
+
+<div class="card">
+    <p>Malé, Maldives</p>
+    <img src="image copy 7.png" alt="Sunset Beach">
+    <p>Crystal-clear water and luxury island resorts.</p>
+</div>
+
+<div class="card">
+    <p>Kyoto, Japan</p>
+    <img src="image copy 6.png" alt="Forest Path">
+    <p>Japan’s most iconic mountain.</p>
+</div>
+
+<div class="card">
+    <p>Zermatt, Switzerland</p>
+    <img src="image copy 8.png" alt="Mountain Lake">
+    <p>Famous for the Matterhorn mountain and scenic alpine views.</p>
+</div>
+
+<div class="card">
+    <p>Reykjavik, Iceland</p>
+    <img src="image copy 9.png" alt="Sunset Road">
+    <p>Best place to see Northern Lights and unique volcanic landscapes.</p>
+</div>
+
+<div class="card">
+    <p>Santorini, Greece</p>
+    <img src="image copy 10.png" alt="Waterfall">
+    <p>Famous for white houses and sunsets.</p>
+</div>
+
+<div class="card">
+    <p>Goa, India</p>
+    <img src="image copy 11.png" alt="Green Forest">
+    <p>Beautiful beaches and nightlife.</p>
+</div>
+
+<div class="card">
+    <p>Manali, India</p>
+    <img src="image copy 12.png" alt="Sunset Beach">
+    <p>Snowy mountains and adventure sports.</p>
+</div>
+
+<div class="card">
+    <p>Jaipur, India</p>
+    <img src="image copy 13.png" alt="Forest Path">
+    <p>Royal palaces and colorful culture.</p>
+</div>
+
+<div class="card">
+    <p>Leh, India</p>
+    <img src="image copy 14.png" alt="Mountain Lake">
+    <p>Stunning high-altitude landscapes.</p>
+</div>
+
+<div class="card">
+    <p>Alleppey, India</p>
+    <img src="image copy 15.png" alt="Sunset Road">
+    <p>Peaceful houseboat experience.</p>
+</div>
+
+<div class="card">
+    <p>Bali, Indonesia</p>
+    <img src="image copy 16.png" alt="Waterfall">
+    <p>Tropical beauty and rich culture.</p>
+</div>
+
+<div class="card">
+    <p>Lima, Peru</p>
+    <img src="image copy 17.png" alt="Green Forest">
+    <p>Known for rich history and world-class cuisine.</p>
+</div>
+
+<div class="card">
+    <p>Petra, Jordan</p>
+    <img src="image copy 18.png" alt="Sunset Beach">
+    <p>Rock-cut city and one of the New Seven Wonders.</p>
+</div>
+
+<div class="card">
+    <p>Sydney, Australia</p>
+    <img src="image copy 19.png" alt="Forest Path">
+    <p>World-famous architectural landmark.</p>
+</div>
+
+<div class="card">
+    <p>London, UK</p>
+    <img src="image copy 20.png" alt="Mountain Lake">
+    <p>Symbol of British history and London city.</p>
+</div>
+
+        
+    
+    </main>
+
+    <footer>
+        <p>© 2026 Interactive Nature Gallery — CSS Grid Practice!</p>
+    </footer>
+
+</body>
+
+</html>
